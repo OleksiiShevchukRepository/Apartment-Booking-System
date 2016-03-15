@@ -1,2 +1,2 @@
 # Apartment-Booking-System
-Booking system which helps to make an room reservation within the hotel.
+Booking system which helps to make a room reservation within the hotel.
