@@ -8,7 +8,7 @@ Business Requirements:
 4. The possibility of checking available rooms on a specific date. 
 5. The possibility of making a reservation for a specific period.
 6. The possibility of extending someone’s stay for a longer period. 
-7. Reservation can be made under one person only.
+7. Reservation can be made under one person only. 
 
 Application Features:
 1. Display of all information about a certain room.
