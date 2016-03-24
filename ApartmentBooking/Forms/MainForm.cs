@@ -56,6 +56,8 @@ namespace ApartmentBooking.UI.Forms
                     str_menu_item_ShowAllOrders_Click(this, e);
                     orderForm.Close();
                 }
+                // Review ES: I would write only one catch block since you are not providing individual handlers and use exception Message property, which is common to 
+                // to all exception classes
                 catch (SqlException exception)
                 {
                     MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -98,6 +100,8 @@ namespace ApartmentBooking.UI.Forms
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        // Review ES: It would be better if a user could select a room in the table and click DisplayRoomInfo, 
+        // instead of entering a room number
         private void str_menu_item_RoomInfo_Click(object sender, EventArgs e)
         {
             RoomNumberForm roomNumberForm = new RoomNumberForm();
@@ -194,6 +198,7 @@ namespace ApartmentBooking.UI.Forms
                 }
             }
         }
+        
         private void str_menu_item_ShowAllOrders_Click(object sender, EventArgs e)
         {
             try
@@ -209,7 +214,7 @@ namespace ApartmentBooking.UI.Forms
                                      DateOut = l.DateOut.ToShortDateString(),
                                      Cost = l.Cost
                                  };
-
+                // Review ES: It would be better to use more meaningful names for form elements ("dgv_Info, lbl_Info") 
                 dgv_Info.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgv_Info.DataSource = resultList.ToList();
                 lbl_Info.Text = "All Orders";
